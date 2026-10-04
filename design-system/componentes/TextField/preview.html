@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TextField · Design system AVA</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.pv{padding:24px}
+.pv-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pv-col{display:flex;flex-direction:column;gap:16px}
+.pv-cap{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px}
+.pv-grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+</style>
+</head>
+<body>
+<div class="pv"><div class="pv-grid2">
+<div class="pv-col">
+<div class="ava-field"><label class="ava-label" for="t1">Matrícula ou e-mail</label><input id="t1" class="ava-input" placeholder="ex.: 20231234" aria-describedby="t1-h"><span class="ava-hint" id="t1-h">Use o e-mail institucional se não lembrar a matrícula.</span></div>
+<div class="ava-field"><label class="ava-label" for="t2">Título do conteúdo</label><input id="t2" class="ava-input" value="Slides da Semana 3"></div>
+<div class="ava-field"><label class="ava-label" for="t3">Prazo de entrega</label><input id="t3" class="ava-input" value="2026-10-02" aria-invalid="true" type="date" aria-describedby="t3-e"><span class="ava-fielderr" id="t3-e"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>O prazo precisa ser posterior a hoje.</span></div>
+</div>
+<div class="pv-col">
+<div class="ava-field"><label class="ava-label" for="t4">Senha</label><div class="ava-pw"><input id="t4" class="ava-input" type="password" value="senha-secreta"><button class="ava-pw__toggle" type="button" aria-controls="t4"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Mostrar</button></div><span class="ava-hint">Mínimo de 8 caracteres.</span></div>
+<div class="ava-field"><label class="ava-label" for="t5">Turma</label><input id="t5" class="ava-input" value="ES-2026/2 · Noturno" readonly></div>
+<div class="ava-field"><label class="ava-label" for="t6">Peso da atividade</label><input id="t6" class="ava-input" value="10" disabled><span class="ava-hint" id="t6-h">Definido pela coordenação.</span></div>
+</div></div></div>
+</body>
+</html>

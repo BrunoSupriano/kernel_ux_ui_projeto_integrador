@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cover · Design system AVA</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:var(--surface)}
+.cv{position:relative;width:960px;height:320px;overflow:hidden;background:var(--surface);font-family:var(--font-sans)}
+.cv svg{position:absolute;left:0;top:0}
+.deep{fill:var(--primary-deep)}.brand{fill:var(--primary)}.sage{fill:var(--secondary)}.tint{fill:var(--tint-200)}.tint1{fill:var(--tint-100)}.amber{fill:var(--alert)}.white{fill:var(--on-primary)}
+.r-lg{rx:12px}
+.name{position:absolute;left:32px;bottom:64px;margin:0;font-size:76px;line-height:.95;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.tag{position:absolute;left:32px;bottom:32px;margin:0;width:400px;font-size:14px;line-height:20px;font-weight:500;color:var(--ink-muted)}
+</style>
+</head>
+<body>
+<div class="cv">
+<svg width="960" height="320" viewBox="0 0 960 320" aria-hidden="true">
+<!-- blocks: primary-deep 184x332, primary 292x188, secondary 136x136, tint-200 148x64, alert 64x64, tint-100 76x64.
+     arrangement: one tall deep slab with satellites stacked to its right, bleeding off the top and right edge.
+     pattern: underline bars 48x12 stepped like a blinking cursor, because the logo is the word kernel plus a terminal-cursor underline; a single alert-coloured bar is the cursor.
+     steps: gap 8 (space-2), radius-lg 12, bar pitch 24 and 48. -->
+<rect class="deep r-lg" x="488" y="-12" width="184" height="332"/>
+<rect class="brand r-lg" x="680" y="-12" width="292" height="188"/>
+<rect class="sage r-lg" x="680" y="184" width="136" height="136"/>
+<rect class="tint r-lg" x="824" y="184" width="148" height="64"/>
+<rect class="amber r-lg" x="824" y="256" width="64" height="64"/>
+<rect class="tint1 r-lg" x="896" y="256" width="76" height="64"/>
+<rect class="sage" x="512" y="48" width="48" height="12"/>
+<rect class="tint" x="512" y="96" width="96" height="12"/>
+<rect class="sage" x="512" y="144" width="72" height="12"/>
+<rect class="tint" x="512" y="192" width="120" height="12"/>
+<rect class="sage" x="512" y="240" width="48" height="12"/>
+<rect class="white" x="704" y="48" width="144" height="12"/>
+<rect class="tint" x="704" y="96" width="96" height="12"/>
+<rect class="amber" x="704" y="144" width="48" height="12"/>
+<rect class="deep" x="704" y="216" width="48" height="12"/>
+</svg>
+<h1 class="name">Instituto<br>Kernel</h1>
+<p class="tag">Escreva o futuro.</p>
+</div>
+</body>
+</html>

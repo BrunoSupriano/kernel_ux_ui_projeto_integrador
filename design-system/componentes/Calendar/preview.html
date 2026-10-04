@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendar · Design system AVA</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.pv{padding:24px}
+.pv-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pv-col{display:flex;flex-direction:column;gap:16px}
+.pv-cap{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px}
+.pv-grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+</style>
+</head>
+<body>
+<div class="pv"><div class="ava-cal">
+<div class="ava-cal__bar"><button class="ava-iconbtn" aria-label="Mês anterior"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button class="ava-iconbtn" aria-label="Próximo mês"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><span class="ava-cal__title">Outubro de 2026</span><button class="ava-btn ava-btn--secondary ava-btn--sm">Hoje</button><button class="ava-btn ava-btn--secondary ava-btn--sm"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>Exportar .ics</button></div>
+<div class="ava-cal__grid" role="grid" aria-label="Outubro de 2026"><div class="ava-cal__dow" role="columnheader">Dom</div><div class="ava-cal__dow" role="columnheader">Seg</div><div class="ava-cal__dow" role="columnheader">Ter</div><div class="ava-cal__dow" role="columnheader">Qua</div><div class="ava-cal__dow" role="columnheader">Qui</div><div class="ava-cal__dow" role="columnheader">Sex</div><div class="ava-cal__dow" role="columnheader">Sáb</div><div class="ava-cal__day ava-cal__day--out"><span class="ava-cal__n">27</span></div><div class="ava-cal__day ava-cal__day--out"><span class="ava-cal__n">28</span></div><div class="ava-cal__day ava-cal__day--out"><span class="ava-cal__n">29</span></div><div class="ava-cal__day ava-cal__day--out"><span class="ava-cal__n">30</span></div><div class="ava-cal__day"><span class="ava-cal__n">1</span></div><div class="ava-cal__day"><span class="ava-cal__n">2</span></div><div class="ava-cal__day ava-cal__day--today"><span class="ava-cal__n">3</span></div><div class="ava-cal__day"><span class="ava-cal__n">4</span></div><div class="ava-cal__day"><span class="ava-cal__n">5</span><span class="ava-ev">19:00 Design de Int. · Sala 312</span><span class="ava-ev ava-ev--changed">Sala alterada</span></div><div class="ava-cal__day"><span class="ava-cal__n">6</span><span class="ava-ev ava-ev--b">19:00 Eng. de Software</span></div><div class="ava-cal__day"><span class="ava-cal__n">7</span><span class="ava-ev ava-ev--deadline">Prazo: Relatório 23:59</span></div><div class="ava-cal__day"><span class="ava-cal__n">8</span><span class="ava-ev ava-ev--c">20:50 Banco de Dados</span></div><div class="ava-cal__day"><span class="ava-cal__n">9</span><span class="ava-ev ava-ev--deadline">Prazo: Modelagem 23:59</span></div><div class="ava-cal__day"><span class="ava-cal__n">10</span></div><div class="ava-cal__day"><span class="ava-cal__n">11</span></div><div class="ava-cal__day"><span class="ava-cal__n">12</span></div><div class="ava-cal__day"><span class="ava-cal__n">13</span></div><div class="ava-cal__day"><span class="ava-cal__n">14</span></div><div class="ava-cal__day"><span class="ava-cal__n">15</span></div><div class="ava-cal__day"><span class="ava-cal__n">16</span></div><div class="ava-cal__day"><span class="ava-cal__n">17</span></div><div class="ava-cal__day"><span class="ava-cal__n">18</span></div><div class="ava-cal__day"><span class="ava-cal__n">19</span></div><div class="ava-cal__day"><span class="ava-cal__n">20</span></div><div class="ava-cal__day"><span class="ava-cal__n">21</span></div><div class="ava-cal__day"><span class="ava-cal__n">22</span></div><div class="ava-cal__day"><span class="ava-cal__n">23</span></div><div class="ava-cal__day"><span class="ava-cal__n">24</span></div><div class="ava-cal__day"><span class="ava-cal__n">25</span></div><div class="ava-cal__day"><span class="ava-cal__n">26</span></div><div class="ava-cal__day"><span class="ava-cal__n">27</span></div><div class="ava-cal__day"><span class="ava-cal__n">28</span></div><div class="ava-cal__day"><span class="ava-cal__n">29</span></div><div class="ava-cal__day"><span class="ava-cal__n">30</span></div><div class="ava-cal__day"><span class="ava-cal__n">31</span></div></div>
+<div class="ava-legend"><span><i style="background:var(--tint-100)"></i>Design de Interação</span><span><i style="background:var(--tint-200)"></i>Engenharia de Software</span><span><i style="background:var(--surface);border:1px solid var(--border-strong)"></i>Banco de Dados</span><span><i style="background:var(--primary-deep)"></i>Prazo de entrega</span><span><i style="background:var(--alert-tint);border:1px solid var(--alert)"></i>Sala alterada</span></div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Erro no servidor</title>
+<link rel="stylesheet" href="../../design-system/tokens/tokens.css">
+<link rel="stylesheet" href="../../design-system/componentes/bundle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</head>
+<body>
+
+<div style="min-height: 720px; display: flex; flex-direction: column; background: var(--surface); font-family: var(--font-sans); color: var(--ink)">
+<header style="display: flex; align-items: center; height: var(--header-height); padding: 0 var(--space-6); background: var(--surface-raised); border-bottom: 1px solid var(--border)">
+<div style="display: flex; align-items: center; gap: var(--space-4)"><span role="img" aria-label="Instituto Kernel" style="font-size: 30px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--primary)">kernel<span style="color: var(--alert)">_</span></span><span aria-hidden="true" style="width: 1px; height: 24px; background: var(--border-strong)"></span><span style="font-weight: 600; font-size: 15px; line-height: 20px; color: var(--ink-muted)">AVA · Portal do Aluno</span></div>
+</header>
+<main style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 48px 32px; text-align: center">
+<span style="display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 50%; background: var(--error-tint); color: var(--error-strong)"><svg class="ava-ico" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1"></path><path d="M6 14H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-1"></path><path d="M6 6h.01"></path><path d="M6 18h.01"></path><path d="m13 6-4 6h6l-4 6"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 560px">
+<h1 style="margin: 0; font-size: 36px; line-height: 44px; font-weight: 800; letter-spacing: -0.02em">Algo deu errado do nosso lado</h1>
+<p style="margin: 0; font-size: 17px; line-height: 26px; color: var(--ink-muted)">O AVA não conseguiu concluir o que você pediu. Tente de novo em alguns instantes.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<button class="ava-btn ava-btn--primary ava-btn--lg" type="button"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M3 21v-5h5"></path></svg>Tentar de novo</button>
+<a class="ava-btn ava-btn--secondary ava-btn--lg" href="#"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Voltar ao início</a>
+</div>
+<section aria-labelledby="suporte500" class="ava-card ava-card--flat" style="width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 12px; text-align: left">
+<h2 id="suporte500" style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 700">Se o erro continuar</h2>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Fale com o suporte e informe o código abaixo. Ele ajuda a equipe a encontrar o problema.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 8px 8px 16px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: var(--radius-md)">
+<div><span style="font-size: 13px; line-height: 20px; color: var(--ink-muted)">ID da ocorrência</span> <span style="font-family: var(--font-mono); font-weight: 500; font-size: 15px; line-height: 22px">7F3A-91C2</span></div>
+<button class="ava-btn ava-btn--ghost ava-btn--sm" type="button"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Copiar código</button>
+</div>
+<a class="ava-btn ava-btn--secondary" href="#" style="align-self: flex-start"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>Falar com o suporte</a>
+</section>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: var(--ink-muted)">Código do erro: <span style="font-family: var(--font-mono); font-weight: 500">500</span></p>
+</main>
+</div>
+
+</body>
+</html>

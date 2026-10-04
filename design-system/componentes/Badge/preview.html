@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Badge · Design system AVA</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.pv{padding:24px}
+.pv-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pv-col{display:flex;flex-direction:column;gap:16px}
+.pv-cap{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px}
+.pv-grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+</style>
+</head>
+<body>
+<div class="pv pv-col">
+<div><div class="pv-cap">Entrega e atividade</div><div class="pv-row"><span class="ava-badge ava-badge--pending"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Pendente</span><span class="ava-badge ava-badge--done"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Entregue</span><span class="ava-badge ava-badge--late"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>Atrasada</span><span class="ava-badge ava-badge--graded"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Corrigida</span></div></div>
+<div><div class="pv-cap">Publicação</div><div class="pv-row"><span class="ava-badge ava-badge--draft"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Rascunho</span><span class="ava-badge ava-badge--scheduled"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Agendado para 07/10</span><span class="ava-badge ava-badge--new">Novo</span></div></div>
+<div><div class="pv-cap">Sala e horário</div><div class="pv-row"><span class="ava-badge ava-badge--changed"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.01"/></svg>Sala alterada</span></div></div>
+</div>
+</body>
+</html>

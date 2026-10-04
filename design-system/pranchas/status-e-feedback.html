@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Status e feedback do AVA</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../componentes/bundle.css">
+<link rel="stylesheet" href="pranchas.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<div class="doc" style="width:1280px;height:1500px">
+<div class="doc-cap">Componentes · Status e feedback</div>
+<h1 class="doc-title">Selos, alertas, toast e modal</h1>
+<p class="doc-sec doc-sub" style="margin-top:4px">Status sempre com ícone e palavra, nunca só cor. Âmbar avisa; vermelho é só para erro real e prazo perdido.</p>
+
+<div class="doc-sec doc-card doc-col" style="gap:20px"><div class="doc-cap" style="margin:0">Selo (badge)</div>
+<div class="doc-row"><span class="ava-badge ava-badge--pending"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Pendente</span><span class="ava-badge ava-badge--done"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Entregue</span><span class="ava-badge ava-badge--late"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>Atrasada</span><span class="ava-badge ava-badge--graded"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Corrigida</span><span class="ava-badge ava-badge--draft"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Rascunho</span><span class="ava-badge ava-badge--scheduled"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Agendado para 07/10</span><span class="ava-badge ava-badge--new">Novo</span><span class="ava-badge ava-badge--changed"><svg class="ava-ico" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.01"/></svg>Sala alterada</span></div>
+</div>
+
+<div class="doc-sec doc-col" style="gap:12px"><div class="doc-cap" style="margin:0">Alerta</div>
+<div class="ava-alert ava-alert--warning" role="alert"><span class="ava-alert__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.01"/></svg></span><div class="ava-alert__body"><div class="ava-alert__title">Sala alterada para hoje, às 19h</div><div class="ava-alert__text">Design de Interação passa da Sala 204 para a Sala 312, Bloco B.</div></div><div class="ava-alert__act"><button class="ava-btn ava-btn--primary">Ver detalhes</button></div></div>
+<div class="ava-alert ava-alert--info" role="status"><span class="ava-alert__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></svg></span><div class="ava-alert__body"><div class="ava-alert__title">Plano de ensino atualizado</div><div class="ava-alert__text">A versão de 03/10 já está disponível em Plano.</div></div></div>
+<div class="ava-alert ava-alert--success" role="status"><span class="ava-alert__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span><div class="ava-alert__body"><div class="ava-alert__title">Entrega recebida</div><div class="ava-alert__text">Relatório de usabilidade enviado em 07/10, às 21:14. Guarde o comprovante.</div></div><div class="ava-alert__act"><button class="ava-btn ava-btn--secondary">Baixar comprovante</button></div></div>
+<div class="ava-alert ava-alert--error" role="alert"><span class="ava-alert__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg></span><div class="ava-alert__body"><div class="ava-alert__title">Não foi possível enviar o arquivo</div><div class="ava-alert__text">O arquivo passa de 20 MB. Compacte ou envie por link.</div></div></div>
+</div>
+
+<div class="doc-sec" style="display:flex;gap:24px;align-items:flex-start">
+<div class="doc-col" style="flex:1 1 0;min-width:0;gap:24px">
+<div><div class="doc-cap">Toast</div><div class="doc-col" style="gap:12px">
+<div class="ava-toast" role="status"><span class="ava-toast__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span><span class="ava-toast__text">Conteúdo publicado e 42 alunos notificados</span><button class="ava-toast__act">Desfazer</button></div>
+<div class="ava-toast" role="status"><span class="ava-toast__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span><span class="ava-toast__text">Nota publicada e aluno notificado</span><button class="ava-iconbtn ava-iconbtn--plain" style="color:#fff;width:32px;height:32px" aria-label="Fechar aviso"><svg class="ava-ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+</div></div>
+<div class="doc-card doc-col" style="gap:16px"><div class="doc-cap" style="margin:0">Barra de progresso</div>
+<div class="ava-progress"><div class="ava-progress__top"><span>Conteúdos vistos</span><span>7 de 12</span></div><div class="ava-progress__track" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" aria-label="Conteúdos vistos"><div class="ava-progress__bar" style="width:58%"></div></div></div>
+<div class="ava-progress"><div class="ava-progress__top"><span>Atividades entregues</span><span>4 de 4</span></div><div class="ava-progress__track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Atividades entregues"><div class="ava-progress__bar ava-progress__bar--done" style="width:100%"></div></div></div>
+</div>
+<div class="doc-card"><div class="doc-cap">Estado vazio</div><div class="ava-empty"><span class="ava-empty__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6H3z"/><path d="M3 13h5l1 3h6l1-3h5"/></svg></span>
+<h3 class="h3">Nenhum aviso por aqui</h3>
+<p class="ava-empty__text">Quando um professor publicar um aviso, ele aparece aqui e também no seu painel inicial.</p>
+<button class="ava-btn ava-btn--secondary">Ver minhas disciplinas</button></div></div>
+</div>
+<div style="flex:1 1 0;min-width:0"><div class="doc-cap">Modal de confirmação (sobre scrim)</div>
+<div class="ava-scrim" style="min-height:520px"><div class="ava-modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+<div class="ava-modal__head"><h2 class="ava-modal__title" id="mt">Excluir este conteúdo?</h2><button class="ava-iconbtn ava-iconbtn--plain" aria-label="Fechar"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<div class="ava-modal__body">“Slides da Semana 3” sai da sala dos alunos e não poderá ser recuperado. As 42 pessoas que já viram o material perdem o acesso.</div>
+<div class="ava-modal__foot"><button class="ava-btn ava-btn--ghost">Cancelar</button><button class="ava-btn ava-btn--danger">Excluir conteúdo</button></div></div></div></div>
+</div>
+</div>
+
+</body>
+</html>

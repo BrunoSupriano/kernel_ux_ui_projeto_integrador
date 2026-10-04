@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Ações e formulários do AVA</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../componentes/bundle.css">
+<link rel="stylesheet" href="pranchas.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<div class="doc" style="width:1280px;height:1700px">
+<div class="doc-cap">Componentes · Ações e formulários</div>
+<h1 class="doc-title">Botões e campos</h1>
+<p class="doc-sub">Cinco variantes de botão em três alturas (32, 40 e 48px). Rótulo sempre visível acima do campo; placeholder é só exemplo.</p>
+
+<div class="doc-sec doc-card doc-col" style="gap:24px">
+<div><div class="doc-cap">Botão · variantes</div><div class="doc-row">
+<button class="ava-btn ava-btn--primary">Entregar atividade</button>
+<button class="ava-btn ava-btn--secondary">Salvar rascunho</button>
+<button class="ava-btn ava-btn--ghost">Cancelar</button>
+<button class="ava-btn ava-btn--danger"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>Excluir conteúdo</button>
+<button class="ava-btn ava-btn--accent">Ver alteração</button></div></div>
+<div><div class="doc-cap">Botão · tamanhos e estados</div><div class="doc-row">
+<button class="ava-btn ava-btn--primary ava-btn--sm">Pequeno 32</button>
+<button class="ava-btn ava-btn--primary"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>Padrão 40</button>
+<button class="ava-btn ava-btn--primary ava-btn--lg">Grande 48<svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<button class="ava-btn ava-btn--primary" disabled>Desabilitado</button>
+<button class="ava-btn ava-btn--secondary" disabled>Desabilitado</button>
+<button class="ava-btn ava-btn--primary" aria-busy="true"><span class="ava-spinner"></span>Enviando</button></div></div>
+<div><div class="doc-cap">Botão de ícone</div><div class="doc-row">
+<button class="ava-iconbtn" aria-label="Notificações, 3 não lidas"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21h4"/></svg><span class="ava-iconbtn__dot">3</span></button>
+<button class="ava-iconbtn" aria-label="Ajuda"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17v.01"/></svg></button>
+<button class="ava-iconbtn" aria-label="Baixar"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg></button>
+<button class="ava-iconbtn ava-iconbtn--plain" aria-label="Fechar"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<button class="ava-iconbtn" aria-label="Excluir" disabled><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button></div></div>
+</div>
+
+<div class="doc-sec" style="display:flex;gap:24px;align-items:flex-start">
+<div class="doc-card doc-col" style="flex:1 1 0;min-width:0;gap:20px"><div class="doc-cap" style="margin:0">Campo de texto</div>
+<div class="ava-field"><label class="ava-label" for="t1">Matrícula ou e-mail</label><input id="t1" class="ava-input" placeholder="ex.: 20231234"><span class="ava-hint">Use o e-mail institucional se não lembrar a matrícula.</span></div>
+<div class="ava-field"><label class="ava-label" for="t2">Título do conteúdo</label><input id="t2" class="ava-input" value="Slides da Semana 3"></div>
+<div class="ava-field"><label class="ava-label" for="t3">Prazo de entrega</label><input id="t3" class="ava-input" value="2026-10-02" aria-invalid="true" type="date"><span class="ava-fielderr"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>O prazo precisa ser posterior a hoje.</span></div>
+<div class="ava-field"><label class="ava-label" for="t4">Senha</label><div class="ava-pw"><input id="t4" class="ava-input" type="password" value="senha-secreta"><button class="ava-pw__toggle" type="button" aria-controls="t4"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Mostrar</button></div><span class="ava-hint">Mínimo de 8 caracteres.</span></div>
+<div class="ava-field"><label class="ava-label" for="t5">Turma</label><input id="t5" class="ava-input" value="ES-2026/2 · Noturno" readonly></div>
+<div class="ava-field"><label class="ava-label" for="t6">Peso da atividade</label><input id="t6" class="ava-input" value="10" disabled><span class="ava-hint">Definido pela coordenação.</span></div>
+</div>
+
+<div class="doc-col" style="flex:1 1 0;min-width:0;gap:24px">
+<div class="doc-card doc-col" style="gap:20px"><div class="doc-cap" style="margin:0">Seleção, texto longo e busca</div>
+<div class="ava-field"><label class="ava-label" for="sel1">Seção de destino</label><select id="sel1" class="ava-select"><option>Semana 3 · Normalização</option><option>Semana 2 · Modelo relacional</option></select><span class="ava-hint">O conteúdo aparece nesta seção da sala.</span></div>
+<div class="ava-field"><label class="ava-label" for="sel2">Período letivo</label><select id="sel2" class="ava-select" aria-invalid="true"><option>Escolha um período</option><option>2026/2</option></select><span class="ava-fielderr"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>Escolha um período para continuar.</span></div>
+<div class="ava-field"><label class="ava-label" for="ta1">Devolutiva ao aluno <span class="ava-label__opt">(opcional)</span></label><textarea id="ta1" class="ava-textarea" placeholder="Escreva o que foi bem e o que pode melhorar"></textarea><span class="ava-hint">O aluno recebe uma notificação quando você publicar.</span></div>
+<div class="ava-search"><span class="ava-search__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><label class="ava-sr" for="s1">Buscar no AVA</label><input id="s1" class="ava-input" type="search" placeholder="Buscar disciplinas, avisos e atividades"><span class="ava-kbd">Ctrl K</span></div>
+</div>
+<div class="doc-card doc-col" style="gap:20px"><div class="doc-cap" style="margin:0">Checkbox, rádio e switch</div>
+<fieldset style="border:0;padding:0;margin:0"><legend class="ava-label">Receber avisos por</legend>
+<label class="ava-choice"><input type="checkbox" checked><span class="ava-choice__text"><span class="ava-choice__label">Notificação no AVA</span><span class="ava-hint">Sempre ligada para mudança de sala.</span></span></label>
+<label class="ava-choice"><input type="checkbox"><span class="ava-choice__text"><span class="ava-choice__label">Notificação no celular</span></span></label>
+</fieldset>
+<fieldset style="border:0;padding:0;margin:0"><legend class="ava-label">Entrega fora do prazo</legend>
+<label class="ava-choice"><input type="radio" name="r" checked><span class="ava-choice__text"><span class="ava-choice__label">Bloquear entrega</span></span></label>
+<label class="ava-choice"><input type="radio" name="r"><span class="ava-choice__text"><span class="ava-choice__label">Permitir e marcar como atrasada</span></span></label>
+<label class="ava-choice"><input type="radio" name="r" disabled><span class="ava-choice__text"><span class="ava-choice__label">Permitir com penalidade</span><span class="ava-hint">Indisponível nesta versão.</span></span></label>
+</fieldset>
+<div class="doc-row" style="gap:24px"><button class="ava-switch" role="switch" aria-checked="true"><span class="ava-switch__track"></span>Visível</button><button class="ava-switch" role="switch" aria-checked="false"><span class="ava-switch__track"></span>Oculto</button><button class="ava-switch" role="switch" aria-checked="true" disabled><span class="ava-switch__track"></span>No AVA</button></div>
+</div>
+</div>
+</div>
+
+<div class="doc-sec doc-card doc-col" style="gap:16px;max-width:760px"><div class="doc-cap" style="margin:0">Envio de arquivo e salvamento automático</div>
+<div class="ava-drop"><span class="ava-drop__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 20h16"/></svg></span>
+<div class="h4">Arraste os arquivos para cá</div>
+<div class="ava-hint">PDF, DOCX, imagem ou ZIP, até 20 MB por arquivo.</div>
+<button class="ava-btn ava-btn--secondary ava-btn--sm" type="button">Escolher arquivos</button></div>
+<div class="ava-file"><svg class="ava-ico" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><div class="ava-file__main"><div class="ava-file__name">relatorio-usabilidade.pdf</div>
+<div class="ava-progress" style="margin-top:6px"><div class="ava-progress__track"><div class="ava-progress__bar" style="width:64%"></div></div></div>
+<div class="ava-file__meta">Enviando… 64% de 2,4 MB</div></div><button class="ava-iconbtn ava-iconbtn--plain" aria-label="Cancelar envio"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<div class="ava-file"><svg class="ava-ico" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><div class="ava-file__main"><div class="ava-file__name">anexo.zip</div>
+<div class="ava-fielderr" style="margin-top:2px"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>Arquivo acima de 20 MB. Compacte ou envie por link.</div></div><button class="ava-iconbtn ava-iconbtn--plain" aria-label="Remover anexo"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button></div>
+<div class="doc-row" style="gap:24px"><span class="ava-save ava-save--ok" role="status"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>Salvo automaticamente às 14:02</span>
+<span class="ava-save" role="status"><span class="ava-spinner"></span>Salvando…</span>
+<span class="ava-save ava-save--err" role="status"><svg class="ava-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>Não foi possível salvar.</span></div>
+</div>
+</div>
+
+</body>
+</html>

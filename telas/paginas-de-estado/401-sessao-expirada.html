@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Sessão encerrada</title>
+<link rel="stylesheet" href="../../design-system/tokens/tokens.css">
+<link rel="stylesheet" href="../../design-system/componentes/bundle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</head>
+<body>
+
+<div style="min-height: 720px; display: flex; flex-direction: column; background: var(--surface); font-family: var(--font-sans); color: var(--ink)">
+<header style="display: flex; align-items: center; height: var(--header-height); padding: 0 var(--space-6); background: var(--surface-raised); border-bottom: 1px solid var(--border)">
+<div style="display: flex; align-items: center; gap: var(--space-4)"><span role="img" aria-label="Instituto Kernel" style="font-size: 30px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--primary)">kernel<span style="color: var(--alert)">_</span></span><span aria-hidden="true" style="width: 1px; height: 24px; background: var(--border-strong)"></span><span style="font-weight: 600; font-size: 15px; line-height: 20px; color: var(--ink-muted)">AVA · Portal do Aluno</span></div>
+</header>
+<main style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 48px 32px; text-align: center">
+<span style="display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 50%; background: var(--tint-100); color: var(--primary)"><svg class="ava-ico" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 560px">
+<h1 style="margin: 0; font-size: 36px; line-height: 44px; font-weight: 800; letter-spacing: -0.02em">Sua sessão terminou</h1>
+<p style="margin: 0; font-size: 17px; line-height: 26px; color: var(--ink-muted)">Por segurança, o AVA encerra a sessão depois de um tempo sem uso. Entre de novo para continuar de onde parou.</p>
+</div>
+<div class="ava-alert ava-alert--info" role="status" style="width: 100%; max-width: 560px; text-align: left">
+<span class="ava-alert__ico"><svg class="ava-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8v.01"></path></svg></span>
+<div class="ava-alert__body"><div class="ava-alert__title">O que você estava editando foi salvo</div><div class="ava-alert__text">O salvamento automático guardou a última versão antes de a sessão terminar.</div></div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+<a class="ava-btn ava-btn--primary ava-btn--lg" href="#"><svg class="ava-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>Entrar de novo</a>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: var(--ink-muted)">Depois de entrar, você volta para a página que estava abrindo.</p>
+</div>
+</main>
+</div>
+
+</body>
+</html>

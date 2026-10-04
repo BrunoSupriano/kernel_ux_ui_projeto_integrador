@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NoticeList · Design system AVA</title>
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-sans)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.pv{padding:24px}
+.pv-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pv-col{display:flex;flex-direction:column;gap:16px}
+.pv-cap{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px}
+.pv-grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+</style>
+</head>
+<body>
+<div class="pv" style="max-width:640px"><ul class="ava-notices">
+<li class="ava-notice ava-notice--unread"><span class="ava-notice__mark" aria-hidden="true"></span><div class="ava-notice__body"><div class="ava-notice__title">Material da aula 6 publicado <span class="ava-badge ava-badge--new">Novo</span></div><div class="ava-notice__meta">Banco de Dados · hoje, 08:12</div></div></li>
+<li class="ava-notice ava-notice--unread"><span class="ava-notice__mark" aria-hidden="true"></span><div class="ava-notice__body"><div class="ava-notice__title">Mudança no formato do relatório <span class="ava-badge ava-badge--new">Novo</span></div><div class="ava-notice__meta">Design de Interação · ontem, 17:40</div></div></li>
+<li class="ava-notice"><span class="ava-notice__mark" aria-hidden="true"></span><div class="ava-notice__body"><div class="ava-notice__title">Cronograma do semestre atualizado </div><div class="ava-notice__meta">Engenharia de Software · 1 de outubro</div></div></li>
+</ul></div>
+</body>
+</html>

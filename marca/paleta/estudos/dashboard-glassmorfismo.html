@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard do Aluno · Glassmorfismo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FFFFFF}a:hover{color:#FFFFFF}
+input::placeholder{color:rgba(255,255,255,0.72)}
+</style>
+<style>
+.kx-ctrl{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 14px;border-radius:12px;background:#ffffff;color:#1F2A26;font:600 13px/1.2 "Plus Jakarta Sans",system-ui,sans-serif;border:1px solid #C9D8D1}
+.kx-ctrl select,.kx-ctrl input{font:inherit}
+</style>
+</head>
+<body>
+<template id="tpl"><div style="position: relative; overflow: hidden; min-height: 1180px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #FFFFFF; background: linear-gradient(160deg, var(--bg-from), var(--bg-to)); --blur: {{blur}}px; --bg-from: {{bgFrom}}; --bg-to: {{bgTo}}; --orb-a: {{orbA}}; --orb-b: {{orbB}}; --orb-c: {{orbC}}; --orb-d: {{orbD}}; --accent: {{accent}}; --accent-glow: {{accentGlow}}; --cta-from: {{ctaFrom}}; --cta-to: {{ctaTo}}; --cta-text: {{ctaText}}; --muted: rgba(255,255,255,0.78); --alert: {{alertSolid}}; --alert-dot: {{alertSolid}}; --alert-bg: {{alertBg}}; --alert-bg2: {{alertBg2}}; --alert-bg3: {{alertBg3}}; --alert-br: {{alertBr}}; --alert-glow: {{alertGlow}}; --succ-dot: {{succDot}}; --succ-bg: {{succBg}}; --succ-br: {{succBr}}; --err-dot: {{errDot}}; --err-bg: {{errBg}}; --err-br: {{errBr}}; --pend-dot: {{accent}}; --pend-bg: {{pendBg}}; --pend-br: {{pendBr}}">
+
+<div aria-hidden="true" style="position: absolute; left: -140px; top: -160px; width: 580px; height: 580px; border-radius: 50%; background: var(--orb-a); opacity: 0.55; filter: blur(100px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; right: -180px; top: 140px; width: 640px; height: 640px; border-radius: 50%; background: var(--orb-b); opacity: 0.5; filter: blur(110px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; left: 34%; top: 700px; width: 480px; height: 480px; border-radius: 50%; background: var(--orb-c); opacity: 0.2; filter: blur(110px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; right: 6%; bottom: -200px; width: 560px; height: 560px; border-radius: 50%; background: var(--orb-d); opacity: 0.32; filter: blur(110px); pointer-events: none"></div>
+
+<div style="position: relative; z-index: 1; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; min-height: 1180px">
+
+<nav aria-label="Navegação principal" style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 0 0 240px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; padding: 24px 16px">
+<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, var(--cta-from), var(--cta-to)); color: var(--cta-text); font-weight: 800; font-size: 15px; box-shadow: 0 0 24px var(--accent-glow)">AVA</span>
+<span style="font-weight: 700; font-size: 16px; line-height: 1.2">Portal<br>do Aluno</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 14px; border-radius: 16px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 0 28px var(--accent-glow); text-decoration: none; font-weight: 700"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Início</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 15px; border-radius: 16px; text-decoration: none; font-weight: 600"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg>Minhas disciplinas</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 15px; border-radius: 16px; text-decoration: none; font-weight: 600"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Calendário</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 15px; border-radius: 16px; text-decoration: none; font-weight: 600"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg><span style="flex-grow: 1">Central de avisos</span><span style="min-width: 22px; box-sizing: border-box; padding: 2px 7px; border-radius: 999px; background: var(--alert); color: #14232B; font-size: 12px; font-weight: 800; text-align: center">{{navBadge}}</span></a>
+</div>
+<span style="flex-grow: 1"></span>
+<div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; display: flex; align-items: center; gap: 12px; padding: 12px 14px">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--cta-from), var(--cta-to)); color: var(--cta-text); font-weight: 800">B</span>
+<div style="line-height: 1.25"><div style="font-weight: 700">Bruno</div><div style="color: var(--muted); font-size: 13px">Aluno</div></div>
+</div>
+</nav>
+
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<div style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); border-radius: 999px; position: relative; flex: 1 1 300px; max-width: 520px; display: flex; align-items: center; box-sizing: border-box; min-height: 56px; padding: 0 18px 0 20px; gap: 12px">
+<span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+<label for="busca" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Buscar no AVA</label>
+<input id="busca" type="search" placeholder="Buscar disciplinas, avisos e atividades" style="flex: 1 1 auto; min-width: 0; min-height: 44px; border: none; outline: none; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 15px">
+<span style="padding: 4px 10px; border-radius: 8px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22); font-size: 12px; font-weight: 700; white-space: nowrap">Ctrl K</span>
+</div>
+<span style="flex-grow: 1"></span>
+<button aria-label="Notificações" style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); border-radius: 50%; position: relative; width: 56px; height: 56px; padding: 0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; cursor: pointer"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21h4"/></svg><span style="position: absolute; top: 14px; right: 15px; width: 11px; height: 11px; border-radius: 50%; background: var(--alert); box-shadow: 0 0 12px var(--alert)"></span></button>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px">
+<div>
+<h1 style="margin: 0; font-size: 46px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(90deg, #FFFFFF 30%, var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent">Olá, Bruno</h1>
+<p style="margin: 8px 0 0; font-size: 17px; color: var(--muted)">Hoje você tem 2 aulas. Há 2 entregas pendentes e 1 atrasada.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: linear-gradient(135deg, var(--cta-from), var(--cta-to)); color: var(--cta-text); text-decoration: none; font-weight: 700; box-shadow: 0 8px 28px var(--accent-glow)">Minhas disciplinas<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M9 6l6 6-6 6"/></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.28); text-decoration: none; font-weight: 600">Calendário</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.28); text-decoration: none; font-weight: 600">Central de avisos</a>
+</div>
+</div>
+
+<div role="status" style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, var(--alert-bg2), var(--alert-bg3)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid var(--alert-br); border-radius: 24px; box-shadow: 0 0 48px var(--alert-glow), inset 0 1px 0 rgba(255,255,255,0.28); padding: 18px 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 16px; background: var(--alert); color: #14232B"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.01"/></svg></span>
+<div style="flex: 1 1 320px">
+<div style="font-weight: 800; font-size: 18px">Sala alterada para hoje, às 19h</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 4px">
+<span>Design de Interação</span>
+<span style="text-decoration: line-through; color: var(--muted)">Sala 204</span>
+<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M9 6l6 6-6 6"/></svg>
+<span style="padding: 3px 12px; border-radius: 999px; background: var(--alert); color: #14232B; font-weight: 800">Sala 312 · Bloco B</span>
+</div>
+</div>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--alert); color: #14232B; text-decoration: none; font-weight: 800">Ver detalhes</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+
+<section style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 7 1 460px; min-width: 0; box-sizing: border-box; padding: 26px 28px">
+<h2 style="margin: 0 0 18px; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800"><span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Hoje e esta semana</h2>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 10px">HOJE · SEGUNDA, 5 DE OUTUBRO</div>
+
+<div style="display: flex; gap: 14px">
+<div style="flex: 0 0 76px; padding-top: 4px"><div style="font-weight: 800; font-size: 18px">19:00</div><div style="color: var(--muted); font-size: 13px">até 20:40</div></div>
+<div style="flex: 0 0 16px; display: flex; flex-direction: column; align-items: center"><span style="width: 14px; height: 14px; margin-top: 8px; border-radius: 50%; background: var(--alert); box-shadow: 0 0 0 5px var(--alert-bg)"></span><span style="flex-grow: 1; width: 2px; margin-top: 6px; background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.08))"></span></div>
+<div style="flex: 1 1 220px; min-width: 0; padding-bottom: 14px">
+<div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 16px 18px">
+<div style="flex: 1 1 200px; min-width: 0"><div style="font-weight: 700; font-size: 16px">Design de Interação</div><div style="display: flex; align-items: center; gap: 6px; color: var(--muted)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Sala 312, Bloco B (antes: Sala 204)</div></div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--alert-bg); border: 1px solid var(--alert-br); color: #FFFFFF; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--alert-dot)"></span>Sala alterada</span>
+</div>
+</div>
+</div>
+
+<div style="display: flex; gap: 14px">
+<div style="flex: 0 0 76px; padding-top: 4px"><div style="font-weight: 800; font-size: 18px">20:50</div><div style="color: var(--muted); font-size: 13px">até 22:30</div></div>
+<div style="flex: 0 0 16px; display: flex; flex-direction: column; align-items: center"><span style="width: 14px; height: 14px; margin-top: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--pend-bg)"></span><span style="flex-grow: 1; width: 2px; margin-top: 6px; background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.08))"></span></div>
+<div style="flex: 1 1 220px; min-width: 0; padding-bottom: 14px">
+<div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; padding: 16px 18px"><div style="font-weight: 700; font-size: 16px">Banco de Dados</div><div style="display: flex; align-items: center; gap: 6px; color: var(--muted)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Sala 108, Bloco A</div></div>
+</div>
+</div>
+
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); margin: 6px 0 10px">TERÇA, 6 DE OUTUBRO</div>
+<div style="display: flex; gap: 14px">
+<div style="flex: 0 0 76px; padding-top: 4px"><div style="font-weight: 800; font-size: 18px">19:00</div><div style="color: var(--muted); font-size: 13px">até 20:40</div></div>
+<div style="flex: 0 0 16px; display: flex; flex-direction: column; align-items: center"><span style="width: 14px; height: 14px; margin-top: 8px; border-radius: 50%; background: transparent; border: 2px solid rgba(255,255,255,0.7); box-sizing: border-box"></span></div>
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; padding: 16px 18px"><div style="font-weight: 700; font-size: 16px">Engenharia de Software</div><div style="display: flex; align-items: center; gap: 6px; color: var(--muted)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Sala 205, Bloco B</div></div>
+</div>
+</div>
+</section>
+
+<section style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 3 1 280px; min-width: 0; box-sizing: border-box; padding: 26px 28px; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800"><span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span>Entregas</h2>
+<div style="position: relative; align-self: center; width: 156px; height: 156px">
+<svg viewBox="0 0 140 140" width="156" height="156" role="img" aria-label="1 de 4 atividades entregues" style="filter: drop-shadow(0 0 12px rgba(255,255,255,0.12))">
+<g fill="none" stroke-width="12" stroke-linecap="round" transform="rotate(-90 70 70)">
+<circle cx="70" cy="70" r="54" stroke="rgba(255,255,255,0.1)"/>
+<circle cx="70" cy="70" r="54" stroke="{{succDot}}" stroke-dasharray="68 271.3" stroke-dashoffset="0"/>
+<circle cx="70" cy="70" r="54" stroke="{{accent}}" stroke-dasharray="68 271.3" stroke-dashoffset="-84.8"/>
+<circle cx="70" cy="70" r="54" stroke="{{accent}}" stroke-dasharray="68 271.3" stroke-dashoffset="-169.6"/>
+<circle cx="70" cy="70" r="54" stroke="{{errDot}}" stroke-dasharray="68 271.3" stroke-dashoffset="-254.5"/>
+</g>
+</svg>
+<div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center"><span style="font-size: 34px; font-weight: 800; line-height: 1">1/4</span><span style="font-size: 13px; color: var(--muted)">entregues</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 10px; height: 10px; border-radius: 50%; background: var(--succ-dot)"></span>1 entregue</div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 10px; height: 10px; border-radius: 50%; background: var(--pend-dot)"></span>2 pendentes</div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 10px; height: 10px; border-radius: 50%; background: var(--err-dot)"></span>1 atrasada</div>
+</div>
+</section>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+
+<section style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 6 1 400px; min-width: 0; box-sizing: border-box; padding: 26px 28px">
+<h2 style="margin: 0 0 18px; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800"><span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Prazos</h2>
+<div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding: 18px 20px; box-shadow: 0 0 32px var(--accent-glow)">
+<div style="flex: 1 1 220px; min-width: 0">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent)">PRÓXIMA ENTREGA · FALTAM 2 DIAS</div>
+<div style="font-weight: 800; font-size: 20px; margin-top: 2px">Relatório de usabilidade</div>
+<div style="color: var(--muted)">Design de Interação · quarta, 7 de outubro, 23:59</div>
+</div>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: linear-gradient(135deg, var(--cta-from), var(--cta-to)); color: var(--cta-text); text-decoration: none; font-weight: 700; box-shadow: 0 8px 28px var(--accent-glow)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>Entregar atividade</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 16px 4px 0">
+<div style="flex: 1 1 220px; min-width: 0"><div style="font-weight: 700">Modelagem do banco de dados</div><div style="color: var(--muted)">Banco de Dados · sexta, 9 de outubro, 23:59</div></div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--pend-bg); border: 1px solid var(--pend-br); color: #FFFFFF; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--pend-dot)"></span>Pendente</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 16px 4px 0">
+<div style="flex: 1 1 220px; min-width: 0"><div style="font-weight: 700">Lista de exercícios 3</div><div style="color: var(--muted)">Engenharia de Software · entregue em 2 de outubro</div></div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--succ-bg); border: 1px solid var(--succ-br); color: #FFFFFF; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--succ-dot)"></span>Entregue</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 16px 4px 0">
+<div style="flex: 1 1 220px; min-width: 0"><div style="font-weight: 700">Estudo de caso</div><div style="color: var(--muted)">Design de Interação · venceu em 30 de setembro</div></div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--err-bg); border: 1px solid var(--err-br); color: #FFFFFF; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--err-dot)"></span>Atrasada</span>
+</div>
+</section>
+
+<section style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 4 1 320px; min-width: 0; box-sizing: border-box; padding: 26px 28px">
+<h2 style="margin: 0 0 6px; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800"><span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></span>Avisos<span style="margin-left: auto; padding: 4px 12px; border-radius: 999px; background: var(--pend-bg); border: 1px solid var(--pend-br); font-size: 13px; font-weight: 700">{{unreadLabel}}</span></h2>
+<sc-for list="{{avisos}}" as="item" hint-placeholder-count="3">
+<button onClick="{{ item.toggle }}" aria-label="{{ item.ariaLabel }}" style="display: flex; align-items: flex-start; gap: 14px; width: 100%; box-sizing: border-box; margin-top: 10px; padding: 14px 16px; border-radius: 18px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.08); color: #FFFFFF; font-family: inherit; font-size: 15px; text-align: left; cursor: pointer">
+<span style="flex: 0 0 12px; height: 12px; margin-top: 5px; border-radius: 50%; box-sizing: border-box; background: {{item.dotBg}}; border: 2px solid {{item.dotBorder}}; box-shadow: {{item.dotGlow}}"></span>
+<span style="display: block; min-width: 0">
+<span style="display: block; font-weight: {{item.titleWeight}}">{{item.title}}</span>
+<span style="display: block; color: var(--muted); font-size: 13px">{{item.meta}}</span>
+<span style="display: block; margin-top: 6px; color: var(--accent); font-size: 13px; font-weight: 700">{{item.actionLabel}}</span>
+</span>
+</button>
+</sc-for>
+<a href="#" style="display: inline-flex; align-items: center; gap: 6px; min-height: 48px; margin-top: 8px; font-weight: 700; text-decoration: none">Ver todos os avisos<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M9 6l6 6-6 6"/></svg></a>
+</section>
+
+<section style="background-color: rgba(6,14,20,0.28); background-image: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); backdrop-filter: blur(var(--blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--blur)) saturate(160%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.3); flex: 3 1 260px; min-width: 0; box-sizing: border-box; padding: 26px 28px; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800"><span style="display: inline-flex; color: var(--accent)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span>Novas notas</h2>
+<div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px"><div><div style="font-weight: 700">Prova 1</div><div style="color: var(--muted); font-size: 14px">Banco de Dados</div></div><span style="font-size: 34px; font-weight: 800; line-height: 1">8,5</span></div>
+<div role="img" aria-label="Nota 8,5 de 10" style="height: 8px; margin-top: 10px; border-radius: 999px; background: rgba(255,255,255,0.14)"><div style="width: 85%; height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--cta-to), var(--cta-from)); box-shadow: 0 0 14px var(--accent-glow)"></div></div>
+</div>
+<div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px"><div><div style="font-weight: 700">Atividade 2</div><div style="color: var(--muted); font-size: 14px">Design de Interação</div></div><span style="font-size: 34px; font-weight: 800; line-height: 1">9,0</span></div>
+<div role="img" aria-label="Nota 9,0 de 10" style="height: 8px; margin-top: 10px; border-radius: 999px; background: rgba(255,255,255,0.14)"><div style="width: 90%; height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--cta-to), var(--cta-from)); box-shadow: 0 0 14px var(--accent-glow)"></div></div>
+</div>
+</section>
+
+</div>
+
+</div>
+</div>
+</div></template>
+<div id="root"></div>
+<form class="kx-ctrl" aria-label="Ajustes da prévia">
+<label>Paleta <select id="kx-pal"><option selected>Azul Petróleo</option><option>Marinho Institucional</option><option>Verde Sálvia</option><option>Índigo Sereno</option></select></label>
+<label>Desfoque <input id="kx-blur" type="range" min="4" max="48" step="2" value="24"></label>
+</form>
+<script>
+/* Mini runtime: reproduz a prancha do canvas (renderVals, {{ }}, sc-for e onClick) sem dependências. */
+let comp;
+class DCLogic { constructor(p) { this.props = p; this.state = {}; } setState(s) { this.state = Object.assign({}, this.state, s); render(); } }
+class Component extends DCLogic {
+  renderVals() {
+    const PALS = {
+      'Azul Petróleo': { primary: '#0F4C5C', secondary: '#1F7A8C', alert: '#E09F3E', success: '#2E7D5B', error: '#B3261E' },
+      'Marinho Institucional': { primary: '#1B2A4A', secondary: '#3D5A99', alert: '#F2A541', success: '#2F855A', error: '#C0392B' },
+      'Verde Sálvia': { primary: '#2F6F5E', secondary: '#6FA58F', alert: '#E3A72F', success: '#3B8A4F', error: '#B83A3A' },
+      'Índigo Sereno': { primary: '#3A45A0', secondary: '#6B77C4', alert: '#F28F3B', success: '#2E8B6A', error: '#C62F2F' }
+    };
+    const p = PALS[this.props.paleta] || PALS['Azul Petróleo'];
+    const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+    const toHex = (v) => '#' + v.map((x) => Math.round(x).toString(16).padStart(2, '0')).join('').toUpperCase();
+    const mixTo = (h, t, target) => toHex(rgb(h).map((x, i) => x + (target[i] - x) * t));
+    const shade = (h, t) => mixTo(h, t, [0, 0, 0]);
+    const tint = (h, t) => mixTo(h, t, [255, 255, 255]);
+    const a = (h, al) => { const c = rgb(h); return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + al + ')'; };
+
+    const accent = tint(p.secondary, 0.5);
+    const toggled = (this.state && this.state.toggled) || {};
+    const base = [
+      { id: 'a1', title: 'Material da aula 6 publicado', meta: 'Banco de Dados · hoje, 08:12', unread0: true },
+      { id: 'a2', title: 'Mudança no formato do relatório', meta: 'Design de Interação · ontem, 17:40', unread0: true },
+      { id: 'a3', title: 'Cronograma do semestre atualizado', meta: 'Engenharia de Software · 1 de outubro', unread0: false }
+    ];
+    const avisos = base.map((x) => {
+      const unread = x.unread0 !== !!toggled[x.id];
+      return {
+        id: x.id,
+        title: x.title,
+        meta: x.meta,
+        dotBg: unread ? 'var(--accent)' : 'transparent',
+        dotBorder: unread ? 'var(--accent)' : 'rgba(255,255,255,0.7)',
+        dotGlow: unread ? '0 0 12px var(--accent-glow)' : 'none',
+        titleWeight: unread ? 800 : 500,
+        actionLabel: unread ? 'Marcar como lido' : 'Marcar como não lido',
+        ariaLabel: x.title + '. ' + (unread ? 'Não lido. Marcar como lido.' : 'Lido. Marcar como não lido.'),
+        unread: unread,
+        toggle: () => {
+          const cur = (this.state && this.state.toggled) || {};
+          this.setState({ toggled: Object.assign({}, cur, { [x.id]: !cur[x.id] }) });
+        }
+      };
+    });
+    const unreadCount = avisos.filter((x) => x.unread).length;
+
+    return {
+      blur: this.props.blur ?? 24,
+      bgFrom: shade(p.primary, 0.5),
+      bgTo: shade(p.primary, 0.82),
+      orbA: p.secondary,
+      orbB: p.primary,
+      orbC: p.alert,
+      orbD: p.success,
+      accent: accent,
+      accentGlow: a(accent, 0.38),
+      ctaFrom: tint(p.secondary, 0.75),
+      ctaTo: tint(p.secondary, 0.45),
+      ctaText: shade(p.primary, 0.78),
+      alertSolid: p.alert,
+      alertBg: a(p.alert, 0.26),
+      alertBg2: a(p.alert, 0.36),
+      alertBg3: a(p.alert, 0.1),
+      alertBr: a(p.alert, 0.65),
+      alertGlow: a(p.alert, 0.28),
+      succDot: tint(p.success, 0.45),
+      succBg: a(p.success, 0.32),
+      succBr: a(tint(p.success, 0.3), 0.65),
+      errDot: tint(p.error, 0.5),
+      errBg: a(p.error, 0.36),
+      errBr: a(tint(p.error, 0.4), 0.7),
+      pendBg: a(p.secondary, 0.3),
+      pendBr: a(accent, 0.55),
+      avisos: avisos,
+      unreadLabel: unreadCount === 1 ? '1 novo' : unreadCount + ' novos',
+      navBadge: unreadCount + 1
+    };
+  }
+}
+
+const tpl = document.getElementById('tpl').innerHTML, root = document.getElementById('root');
+const get = (o, p) => p.split('.').reduce((a, k) => a == null ? a : a[k], o);
+let handlers = [];
+function render() {
+  const v = comp.renderVals(); handlers = [];
+  let h = tpl.replace(/<sc-for list="\{\{(\w+)\}\}" as="(\w+)"[^>]*>([\s\S]*?)<\/sc-for>/g, (m, list, as, b) =>
+    (v[list] || []).map(it => b
+      .replace(/onClick="\{\{\s*([\w.]+)\s*\}\}"/g, (x, p) => { handlers.push(get({[as]: it}, p)); return 'data-h="' + (handlers.length - 1) + '"'; })
+      .replace(/\{\{\s*([\w.]+)\s*\}\}/g, (x, p) => p.startsWith(as + '.') ? get({[as]: it}, p) : get(v, p))
+    ).join(''));
+  h = h.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (x, p) => get(v, p));
+  root.innerHTML = h;
+  root.querySelectorAll('[data-h]').forEach(el => el.addEventListener('click', () => handlers[+el.dataset.h]()));
+}
+const pal = document.getElementById('kx-pal'), blur = document.getElementById('kx-blur');
+const q = new URLSearchParams(location.search);
+if (q.get('paleta')) pal.value = q.get('paleta');
+comp = new Component({ paleta: pal.value, blur: +blur.value });
+pal.addEventListener('change', () => { comp.props = Object.assign({}, comp.props, { paleta: pal.value }); render(); });
+blur.addEventListener('input', () => { comp.props = Object.assign({}, comp.props, { blur: +blur.value }); render(); });
+render();
+</script>
+</body>
+</html>
